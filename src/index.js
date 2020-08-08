@@ -7,6 +7,8 @@ const app = new Koa()
 const router = new koaRouter()
 const Schema = mongoose.Schema
 
+let cardReceivedRequest = {}
+
 mongoose.Promise = global.Promise
 
 //Conectar o mongoose ao mongo
@@ -29,12 +31,24 @@ mongoose.Promise = global.Promise
 //Definindo um modelo usando o esquema do card
 const cardModel = mongoose.model('cards', cardSchema)
 
+
+const createNewCard = (cardObject) => {
+    const cardJSON = JSON.stringify(cardObject)
+    new cardModel(cardObject)
+        .save()
+        .then(() => console.log(`Create card ${cardObject.front}}`))
+        .catch(err => console.error(`Error creating card: ${err}`))
+    
+}
+
 //Rota do koa router para receber infos do card e tratar com o koa body
 router.post('/card', koaBody(), 
     (ctx) => {
-        console.log(ctx.request.body)
+        cardReceivedRequest = ctx.request.body
+        createNewCard(cardReceivedRequest)
         ctx.body = ctx.request.body
 })
+
 
 app.use(router.routes())
 

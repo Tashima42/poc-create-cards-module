@@ -8,5 +8,8 @@
     "koa-body": "^4.2.0",
     "koa-router": "^9.1.0",
     "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
