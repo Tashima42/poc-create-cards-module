@@ -3,7 +3,7 @@
 Issue: https://github.com/GuenkaTreinamentos/treinamentos/issues/20
 
 ## Instruções
-1. Clone o repo: `git@github.com:Tashima42/poc-create-cards-module.git`
+1. Clone o repo: `git@github.com:Tashima42/poc-modulo-criacao-cards.git`
 2. Crie uma pasta para o mongo: `mkdir docker-mongo && docker-mongo/mongodata`
 3. Inicie o container: `docker-compose up -d`
 4. Instale as dependências: `yarn install`
