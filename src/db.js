@@ -22,8 +22,9 @@ mongoose.Promise = global.Promise
         }
     })
 
+
 //Definindo um modelo usando o esquema do card
-const cardModel = mongoose.model('cards', cardSchema)
+const cardModel = mongoose.model('mycards', cardSchema)
 
 
 const createNewCard = (cardObject) => {
