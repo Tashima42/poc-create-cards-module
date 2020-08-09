@@ -1,13 +1,7 @@
-const Koa = require('koa')
-const koaRouter = require('koa-router')
-const koaBody = require('koa-body')
+const koaServer = require('./server')
 const mongoose = require('mongoose')
-
-const app = new Koa()
-const router = new koaRouter()
+const { cardRequestObject } = require('./server')
 const Schema = mongoose.Schema
-
-let cardReceivedRequest = {}
 
 mongoose.Promise = global.Promise
 
@@ -41,15 +35,4 @@ const createNewCard = (cardObject) => {
     
 }
 
-//Rota do koa router para receber infos do card e tratar com o koa body
-router.post('/card', koaBody(), 
-    (ctx) => {
-        cardReceivedRequest = ctx.request.body
-        createNewCard(cardReceivedRequest)
-        ctx.body = ctx.request.body
-})
-
-
-app.use(router.routes())
-
-app.listen(3000, () => console.log(`Listening on port https://localhost:3000`))
+exports.createNewCard = createNewCard
