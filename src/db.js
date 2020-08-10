@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
 const server = require('./server')
+const cardModels = require('./models/card')
 
 const dbConfig = {
     url: 'mongodb://localhost:27017/cards',
@@ -23,30 +23,13 @@ const connectDb = async () => {
         process.exit(1)
     }
 }
-
 connectDb()
 
-//Esquema de card para o mongoose
-const cardSchema = new Schema({
-    front: {
-        type: String,
-        require: true
-    },
-    back: {
-        type: String,
-        require: true
-    }
-})
-
-
-//Definindo um modelo usando o esquema do card
-const cardModel = mongoose.model('mycards', cardSchema)
-
-
+// Cria um novo card na DB
 const createNewCard = async (cardObject) => {
     try {
-        await new cardModel(cardObject).save()
-        console.info(`Create card ${cardObject.front}`)
+        await new cardModels.cardBaseModel(cardObject).save()
+        console.info(`Create card ${cardObject.name}`)
     } catch (err) {
         console.error(`Error creating card: ${err}`)
     }
