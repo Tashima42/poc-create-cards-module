@@ -6,15 +6,15 @@ const Schema = mongoose.Schema
 const cardSchema = new Schema({
   name: {
     type: String,
-    require: true
+    required: true
   },
   front: {
     type: String,
-    require: true
+    required: true
   },
   back: {
     type: String,
-    require: true
+    required: true
   }
 })
 
