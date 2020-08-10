@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const { cardRequestObject } = require('./server')
 const Schema = mongoose.Schema
 
-mongoose.Promise = global.Promise
 
 //Conectar o mongoose ao mongo
     mongoose.connect('mongodb://localhost:27017/cards', { useNewUrlParser: true, useUnifiedTopology: true })
