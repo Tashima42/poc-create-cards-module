@@ -3,7 +3,7 @@ const server = require('./server')
 const cardModels = require('./models/card')
 
 const dbConfig = {
-    url: 'mongodb://localhost:27017/cards',
+    url: `mongodb://localhost:27017/${process.env.COLLECTION}`,
     user: '',
     password: '',
     options: {
@@ -17,7 +17,7 @@ const connectDb = async () => {
     try {
         await mongoose.connect(dbConfig.url, dbConfig.options)
 
-        console.info("Connected to MongoDB")
+        console.info(`Connected to MongoDB on: ${dbConfig.url}`)
     } catch (err) {
         console.error(`Error connecting to MongoDB: ${err}`)
         process.exit(1)
