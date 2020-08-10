@@ -17,5 +17,3 @@ const createCardRequest = router.post('/card', koaBody(),
 app.use(router.routes())
 
 app.listen(3000)
-
-module.exports = {  }
