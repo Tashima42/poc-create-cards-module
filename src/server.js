@@ -9,9 +9,9 @@ const router = new koaRouter()
 
 const createCardRequest = router.post('/card', koaBody(),
     (ctx) => {
-        const cardReceivedRequest = ctx.request.body
+        const receivedRequestBody = ctx.request.body
         ctx.body = ctx.request.body
-        createCardDB.createNewCard(cardReceivedRequest)
+        createCardDB.createNewCard(receivedRequestBody)
     })
 
 app.use(router.routes())
