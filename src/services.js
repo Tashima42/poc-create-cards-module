@@ -1,11 +1,19 @@
 const cardModels = require('./models/card')
 
-const createCardRequest = (requestBody) => {
-  const receivedRequestBody = requestBody
-  createNewCard(receivedRequestBody)
+// Cria um novo card na DB
+const postCreateCard = (data) => {
+  async (data) => {
+    try {
+      await new cardModels(data).save()
+      console.info(`Create card ${data.name}`)
+    } catch (err) {
+      console.error(`Error creating card: ${err}`)
+    }
+  }
 }
 
-const sendAllCardsRequest = async () => {
+// Mostra todos os cards
+const getAllCards = async () => {
   try {
     let requestBody = await cardModels.find()
     return requestBody
@@ -15,20 +23,7 @@ const sendAllCardsRequest = async () => {
 }
 
 
-
-
-// Cria um novo card na DB
-const createNewCard = async (cardObject) => {
-  try {
-    await new cardModels(cardObject).save()
-    console.info(`Create card ${cardObject.name}`)
-  } catch (err) {
-    console.error(`Error creating card: ${err}`)
-  }
-
-}
-
 module.exports = {
-  createCardRequest: createCardRequest,
-  sendAllCardsRequest: sendAllCardsRequest
+  postCreateCard,
+  getAllCards
 }

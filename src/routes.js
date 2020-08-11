@@ -6,11 +6,11 @@ const router = new koaRouter()
 router.post('/card', koaBody(), (ctx) => {
   const requestBody = ctx.request.body
   ctx.body = requestBody
-  services.createCardRequest(requestBody)
+  services.postCreateCard(requestBody)
 })
 
 router.get('/card', async (ctx) => {
-  ctx.body = await services.sendAllCardsRequest()
+  ctx.body = await services.getAllCards()
 })
 
 module.exports = router
