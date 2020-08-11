@@ -15,10 +15,22 @@ const cardSchema = new Schema({
   back: {
     type: String,
     required: true
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
+  lastUpated: {
+    type: Date,
+    default: Date.now
+  },
+  deleted: {
+    type: Boolean,
+    default: false
   }
 })
 
 //Definindo um modelo usando o esquema do card
 const cardBaseModel = mongoose.model('mycards', cardSchema)
 
-exports.cardBaseModel = cardBaseModel
+module.exports = cardBaseModel
