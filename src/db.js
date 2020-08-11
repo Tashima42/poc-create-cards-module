@@ -3,9 +3,7 @@ const server = require('./server')
 const cardModels = require('./models/card')
 
 const dbConfig = {
-    url: `mongodb://localhost:27017/${process.env.COLLECTION}`,
-    user: '',
-    password: '',
+    uri: process.env.CONNECTION || 'mongodb://localhost:27017/cards',
     options: {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -15,9 +13,9 @@ const dbConfig = {
 //Conectar o mongoose ao mongo
 const connectDb = async () => {
     try {
-        await mongoose.connect(dbConfig.url, dbConfig.options)
+        await mongoose.connect(dbConfig.uri, dbConfig.options)
 
-        console.info(`Connected to MongoDB on: ${dbConfig.url}`)
+        console.info(`Connected to MongoDB on: ${dbConfig.uri}`)
     } catch (err) {
         console.error(`Error connecting to MongoDB: ${err}`)
         process.exit(1)
