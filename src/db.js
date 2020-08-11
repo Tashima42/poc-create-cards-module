@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const server = require('./server')
 const cardModels = require('./models/card')
 
 const dbConfig = {
