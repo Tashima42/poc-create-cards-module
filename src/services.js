@@ -1,14 +1,12 @@
 const cardModels = require('./models/card')
 
 // Cria um novo card na DB
-const postCreateCard = (data) => {
-  async (data) => {
-    try {
-      await new cardModels(data).save()
-      console.info(`Create card ${data.name}`)
-    } catch (err) {
-      console.error(`Error creating card: ${err}`)
-    }
+const postCreateCard = async (data) => {
+  try {
+    await new cardModels(data).save()
+    console.info(`Created new card: ${data.name}`)
+  } catch (err) {
+    console.error(`Error creating card: ${err}`)
   }
 }
 
