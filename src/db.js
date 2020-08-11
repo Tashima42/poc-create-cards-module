@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const cardModels = require('./models/card')
 
+// Configurações para a conexão como o mongoDB
 const dbConfig = {
     uri: process.env.CONNECTION || 'mongodb://localhost:27017/cards',
     options: {
@@ -21,16 +21,3 @@ const connectDb = async () => {
     }
 }
 connectDb()
-
-// Cria um novo card na DB
-const createNewCard = async (cardObject) => {
-    try {
-        await new cardModels.cardBaseModel(cardObject).save()
-        console.info(`Create card ${cardObject.name}`)
-    } catch (err) {
-        console.error(`Error creating card: ${err}`)
-    }
-
-}
-
-exports.createNewCard = createNewCard
