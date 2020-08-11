@@ -5,11 +5,22 @@ const createCardRequest = (requestBody) => {
   createNewCard(receivedRequestBody)
 }
 
+const sendAllCardsRequest = async () => {
+  try {
+    let requestBody = await cardModels.find()
+    return requestBody
+  } catch (err) {
+    console.error(`Error while trying to retrieve all cards: ${err}`)
+  }
+}
+
+
+
 
 // Cria um novo card na DB
 const createNewCard = async (cardObject) => {
   try {
-    await new cardModels.cardBaseModel(cardObject).save()
+    await new cardModels(cardObject).save()
     console.info(`Create card ${cardObject.name}`)
   } catch (err) {
     console.error(`Error creating card: ${err}`)
@@ -17,4 +28,7 @@ const createNewCard = async (cardObject) => {
 
 }
 
-exports.createCardRequest = createCardRequest
+module.exports = {
+  createCardRequest: createCardRequest,
+  sendAllCardsRequest: sendAllCardsRequest
+}

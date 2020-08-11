@@ -9,4 +9,8 @@ router.post('/card', koaBody(), (ctx) => {
   services.createCardRequest(requestBody)
 })
 
+router.get('/card', async (ctx) => {
+  ctx.body = await services.sendAllCardsRequest()
+})
+
 module.exports = router
