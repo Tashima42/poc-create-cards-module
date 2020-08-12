@@ -6,7 +6,9 @@ const postCreateCard = async (data) => {
     await new cardModels(data).save()
     console.info(`Created new card: ${data.name}`)
   } catch (err) {
-    console.error(`Error creating card: ${err}`)
+    const returnError = `Error creating card - ${err}`
+    console.error(returnError)
+    return returnError
   }
 }
 
@@ -16,12 +18,25 @@ const getAllCards = async () => {
     let requestBody = await cardModels.find()
     return requestBody
   } catch (err) {
-    console.error(`Error while trying to retrieve all cards: ${err}`)
+    const returnError = `Error while retrieving cards - ${err}`
+    console.error(returnError)
+    return returnError
   }
 }
 
+const getCardById = async (data) => {
+  try {
+    let requestBody = await cardModels.findById(data)
+    return requestBody
+  } catch (err) {
+    const returnError = `Error while retrieving card - ${err}`
+    console.error(returnError)
+    return returnError
+  }
+}
 
 module.exports = {
   postCreateCard,
-  getAllCards
+  getAllCards,
+  getCardById
 }
