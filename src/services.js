@@ -1,4 +1,5 @@
 const cardModels = require('./models/card')
+const mongoose = require('mongoose')
 
 // Cria um novo card na DB
 const postCreateCard = async (data) => {
@@ -23,11 +24,20 @@ const getAllCards = async () => {
     return returnError
   }
 }
+/*
+if (!mongoose.Types.ObjectId.isValid(req.body.id)) {
+    return res.status(400).send("Invalid object id");
+}
+*/
 
 const getCardById = async (data) => {
   try {
-    let requestBody = await cardModels.findById(data)
-    return requestBody
+    if (mongoose.Types.ObjectId.isValid(data)) {
+      let requestBody = await cardModels.findById(data)
+      return requestBody
+    } else {
+      throw new Error(`Parameter ${data} is not an ID`)
+    }
   } catch (err) {
     const returnError = `Error while retrieving card - ${err}`
     console.error(returnError)
