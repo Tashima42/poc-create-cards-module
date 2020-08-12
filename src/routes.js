@@ -13,4 +13,8 @@ router.get('/card', async (ctx) => {
   ctx.body = await services.getAllCards()
 })
 
+router.get('/card/:id', async (ctx) => {
+  ctx.body = await services.getCardById(ctx.params.id)
+})
+
 module.exports = router
