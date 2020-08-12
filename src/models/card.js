@@ -1,36 +1,18 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const Joi = require('joi')
+const joigoose = require('joigoose')(mongoose)
 
 
 //Esquema de card para o mongoose
-const cardSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  front: {
-    type: String,
-    required: true
-  },
-  back: {
-    type: String,
-    required: true
-  },
-  created: {
-    type: Date,
-    default: Date.now
-  },
-  lastUpated: {
-    type: Date,
-    default: Date.now
-  },
-  deleted: {
-    type: Boolean,
-    default: false
-  }
+const cardJoiSchema = Joi.object({
+  name: Joi.string().min(3).max(30).required(),
+  front: Joi.string().min(3).max(100).required(),
+  back: Joi.string().min(3).max(100).required(),
+  created: Joi.date().default(Date.now),
+  lastUpated: Joi.date().default(Date.now),
+  deleted: Joi.boolean().default(false)
 })
 
-//Definindo um modelo usando o esquema do card
-const cardBaseModel = mongoose.model('mycards', cardSchema)
+const cardMongooseSchema = new mongoose.Schema(joigoose.convert(cardJoiSchema))
 
-module.exports = cardBaseModel
+module.exports = mongoose.model('mycards', cardMongooseSchema)
