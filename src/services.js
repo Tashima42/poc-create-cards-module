@@ -1,5 +1,6 @@
 const cardModels = require('./models/card')
 const mongoose = require('mongoose')
+const card = require('./models/card')
 
 // Cria um novo card na DB
 const postCreateCard = async (data) => {
@@ -24,11 +25,6 @@ const getAllCards = async () => {
     return returnError
   }
 }
-/*
-if (!mongoose.Types.ObjectId.isValid(req.body.id)) {
-    return res.status(400).send("Invalid object id");
-}
-*/
 
 const getCardById = async (data) => {
   try {
@@ -36,7 +32,7 @@ const getCardById = async (data) => {
       let requestBody = await cardModels.findById(data)
       return requestBody
     } else {
-      throw new Error(`Parameter ${data} is not an ID`)
+      throw new Error(`Parameter ${data} is not a valid ID`)
     }
   } catch (err) {
     const returnError = `Error while retrieving card - ${err}`
@@ -45,8 +41,24 @@ const getCardById = async (data) => {
   }
 }
 
+const deleteCardById = async (data) => {
+  try {
+    if (mongoose.Types.ObjectId.isValid(data)) {
+      await cardModels.findByIdAndDelete(data)
+      return `Deleted card: ${data}`
+    } else {
+      throw new Error(`Parameter ${data} is not a valid ID`)
+    }
+  } catch (err) {
+    const returnError = `Error deleting card - ${err}`
+    console.error(returnError)
+    return returnError
+  }
+}
+
 module.exports = {
   postCreateCard,
   getAllCards,
-  getCardById
+  getCardById,
+  deleteCardById
 }

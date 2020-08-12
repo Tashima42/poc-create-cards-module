@@ -17,4 +17,8 @@ router.get('/card/:id', async (ctx) => {
   ctx.body = await services.getCardById(ctx.params.id)
 })
 
+router.delete('/card/:id', async (ctx) => {
+  ctx.body = await services.deleteCardById(ctx.params.id)
+})
+
 module.exports = router
