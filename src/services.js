@@ -15,9 +15,9 @@ const postCreateCard = async (data) => {
 }
 
 // Mostra todos os cards
-const getAllCards = async () => {
+const getAllCards = async (limit, initial, end) => {
   try {
-    let requestBody = await cardModels.find()
+    let requestBody = await cardModels.find({ created: { $gte: initial, $lte: end } }).limit(limit)
     return requestBody
   } catch (err) {
     const returnError = `Error while retrieving cards - ${err}`
