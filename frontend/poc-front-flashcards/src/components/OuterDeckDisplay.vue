@@ -27,7 +27,7 @@ export default {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 30px;
-  padding-right: 10px;
+  padding-right: 30px;
 
   display: inline-flex;
   flex-direction: row;
