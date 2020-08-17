@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: "InnerDeckDisplay",
   data() {
     return {
       name: "baralho de testes",
