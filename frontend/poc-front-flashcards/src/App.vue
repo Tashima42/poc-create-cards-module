@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <DefaultButton />
-    <InnerDeckDisplay corBg="#8130D1" />
+    <DefaultButton buttonName="create new deck" backgroundColor="#384ED3" />
+    <InnerDeckDisplay backgroundColor="#8130D1" deckName="test deck" />
   </div>
 </template>
 
