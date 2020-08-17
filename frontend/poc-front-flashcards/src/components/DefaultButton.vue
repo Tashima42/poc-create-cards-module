@@ -22,18 +22,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: "Roboto Condensed";
-  src: local("Roboto Condensed"),
-    url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
-}
-
 .new-deck-btn {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.7em;
-  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
 
