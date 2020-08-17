@@ -29,6 +29,10 @@ export default {
   padding-left: 30px;
   padding-right: 30px;
 
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
   display: inline-flex;
   flex-direction: row;
 

@@ -3,6 +3,7 @@
     <DefaultButton buttonText="create new deck" />
     <InnerDeckDisplay deckName="test deck" />
     <OuterDeckDisplay />
+    <InsertTextLarge />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import DefaultButton from "./components/DefaultButton";
 import InnerDeckDisplay from "./components/InnerDeckDisplay";
 import OuterDeckDisplay from "./components/OuterDeckDisplay";
+import InsertTextLarge from "./components/InsertTextLarge";
 
 export default {
   name: "App",
@@ -17,6 +19,7 @@ export default {
     DefaultButton,
     InnerDeckDisplay,
     OuterDeckDisplay,
+    InsertTextLarge,
   },
 };
 </script>
