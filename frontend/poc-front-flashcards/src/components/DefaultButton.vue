@@ -1,6 +1,6 @@
 <template>
-  <div class="criar-baralho">
-    <button class="btn-criar">CRIAR BARALHO</button>
+  <div class="create-deck">
+    <button class="new-deck-btn">CRIAR BARALHO</button>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {};
     url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 }
 
-.btn-criar {
+.new-deck-btn {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
