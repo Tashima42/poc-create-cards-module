@@ -1,25 +1,31 @@
 <template>
   <div id="app">
-    <DefaultButton buttonText="create new deck" />
+    <!--     <DefaultButton buttonText="create new deck" />
     <InnerDeckDisplay deckName="test deck" />
     <OuterDeckDisplay />
     <InsertTextLarge />
+    <InsertTextSmall />-->
+    <NewDeck />
   </div>
 </template>
 
 <script>
-import DefaultButton from "./components/DefaultButton";
+/* import DefaultButton from "./components/DefaultButton";
 import InnerDeckDisplay from "./components/InnerDeckDisplay";
 import OuterDeckDisplay from "./components/OuterDeckDisplay";
-import InsertTextLarge from "./components/InsertTextLarge";
+import InsertTextLarge from "./components/InsertTextLarge"; 
+import InsertTextSmall from "./components/InsertTextSmall";*/
+import NewDeck from "./views/NewDeck";
 
 export default {
   name: "App",
   components: {
-    DefaultButton,
+    /*     DefaultButton,
     InnerDeckDisplay,
     OuterDeckDisplay,
-    InsertTextLarge,
+    InsertTextLarge, 
+    InsertTextSmall,*/
+    NewDeck,
   },
 };
 </script>

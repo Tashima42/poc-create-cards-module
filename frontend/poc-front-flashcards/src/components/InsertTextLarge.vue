@@ -19,12 +19,13 @@ export default {
 .text-input-label {
   align-self: flex-start;
 
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-bottom: 8px;
 
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.3rem;
+  font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
 
@@ -34,13 +35,15 @@ export default {
 .text-input {
   align-self: center;
 
-  width: 50vw;
-  height: 20vh;
-  min-width: 480px;
-  min-height: 130px;
+  width: 28vw;
+  height: 8vh;
+  min-width: 280px;
+  min-height: 60px;
 
   padding: 20px;
   resize: none;
+
+  margin-bottom: 20px;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
