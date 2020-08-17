@@ -1,16 +1,38 @@
 <template>
   <div class="create-deck">
-    <button class="new-deck-btn">CRIAR BARALHO</button>
+    <button class="new-deck-btn" :style="cssVars">{{ name }}</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "DefaultButton",
+  data() {
+    return {
+      name: this.buttonName,
+    };
+  },
+  props: {
+    backgroundColor: {
+      type: String,
+      default: "#D13060",
+    },
+    buttonName: {
+      type: String,
+      default: "button",
+    },
+  },
+  computed: {
+    cssVars() {
+      return {
+        "--background-color": this.backgroundColor,
+      };
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @font-face {
   font-family: "Roboto Condensed";
   src: local("Roboto Condensed"),
@@ -24,11 +46,14 @@ export default {
   font-size: 1.7em;
   line-height: 42px;
   text-align: center;
+  text-transform: uppercase;
 
-  width: 30vw;
-  height: 7vh;
+  padding-left: 1.7vw;
+  padding-right: 1.7vw;
+  padding-top: 1.2vh;
+  padding-bottom: 1.2vh;
 
-  background: #1f38d1;
+  background: var(--background-color);
   color: #e8e8e8;
 
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
