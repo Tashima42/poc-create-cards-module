@@ -1,5 +1,6 @@
 <template>
   <div class="insert-text-field">
+    <p class="text-input-label">Text label</p>
     <textarea type="text" class="text-input" />
   </div>
 </template>
@@ -10,7 +11,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.insert-text-field {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.text-input-label {
+  align-self: flex-start;
+
+  margin-left: 50px;
+
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #373737;
+}
+
 .text-input {
+  align-self: center;
+
   width: 50vw;
   height: 20vh;
   min-width: 480px;
