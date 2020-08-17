@@ -1,5 +1,5 @@
 <template>
-  <div class="inner-deck-display" :style="cssVars">
+  <div class="inner-deck-display">
     <p class="deck-name">{{ name }}</p>
   </div>
 </template>
@@ -13,20 +13,9 @@ export default {
     };
   },
   props: {
-    backgroundColor: {
-      type: String,
-      default: "#D13060",
-    },
     deckName: {
       type: String,
       default: "Deck name",
-    },
-  },
-  computed: {
-    cssVars() {
-      return {
-        "--background-color": this.backgroundColor,
-      };
     },
   },
 };
@@ -45,7 +34,7 @@ export default {
 
   margin: 30px;
 
-  background: var(--background-color);
+  background: #d13060;
 
   box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2),
     0px 4px 4px rgba(0, 0, 0, 0.25);

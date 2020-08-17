@@ -1,6 +1,6 @@
 <template>
   <div class="create-deck">
-    <button class="new-deck-btn" :style="cssVars">{{ text }}</button>
+    <button class="new-deck-btn">{{ text }}</button>
   </div>
 </template>
 
@@ -13,20 +13,9 @@ export default {
     };
   },
   props: {
-    backgroundColor: {
-      type: String,
-      default: "#D13060",
-    },
     buttonText: {
       type: String,
       default: "button",
-    },
-  },
-  computed: {
-    cssVars() {
-      return {
-        "--background-color": this.backgroundColor,
-      };
     },
   },
 };
@@ -53,7 +42,7 @@ export default {
   padding-top: 1.2vh;
   padding-bottom: 1.2vh;
 
-  background: var(--background-color);
+  background: #384ed3;
   color: #e8e8e8;
 
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
