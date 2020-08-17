@@ -34,12 +34,16 @@ export default {
 
 <style lang="scss" scoped>
 .inner-deck-display {
-  width: 34vw;
-  height: 20vh;
+  width: 20vw;
+  height: 10vh;
+  min-width: 312px;
+  min-height: 180px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 30px;
 
   background: var(--background-color);
 

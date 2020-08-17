@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <DefaultButton buttonName="create new deck" backgroundColor="#384ED3" />
+    <DefaultButton buttonText="create new deck" backgroundColor="#384ED3" />
     <InnerDeckDisplay backgroundColor="#8130D1" deckName="test deck" />
+    <OuterDeckDisplay />
   </div>
 </template>
 
 <script>
 import DefaultButton from "./components/DefaultButton";
 import InnerDeckDisplay from "./components/InnerDeckDisplay";
+import OuterDeckDisplay from "./components/OuterDeckDisplay";
+
 export default {
   name: "App",
   components: {
     DefaultButton,
     InnerDeckDisplay,
+    OuterDeckDisplay,
   },
 };
 </script>

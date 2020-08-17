@@ -1,6 +1,6 @@
 <template>
   <div class="create-deck">
-    <button class="new-deck-btn" :style="cssVars">{{ name }}</button>
+    <button class="new-deck-btn" :style="cssVars">{{ text }}</button>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: "DefaultButton",
   data() {
     return {
-      name: this.buttonName,
+      text: this.buttonText,
     };
   },
   props: {
@@ -17,7 +17,7 @@ export default {
       type: String,
       default: "#D13060",
     },
-    buttonName: {
+    buttonText: {
       type: String,
       default: "button",
     },
@@ -60,5 +60,10 @@ export default {
     0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 10px;
+  outline: none;
+}
+
+.new-deck-btn:active {
+  transform: translateY(2px) translateX(-2px);
 }
 </style>
