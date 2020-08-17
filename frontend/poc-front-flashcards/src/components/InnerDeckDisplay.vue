@@ -1,14 +1,15 @@
 <template>
-  <div class="baralho-tela-inicial" :style="cssVars">
-    <p class="nome-baralho">{{ nome }}</p>
+  <div class="inner-deck-display" :style="cssVars">
+    <p class="deck-name">{{ name }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  name: "InnerDeckDisplay",
   data() {
     return {
-      nome: "baralho de testes",
+      name: "baralho de testes",
     };
   },
   props: {
@@ -28,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.baralho-tela-inicial {
+.inner-deck-display {
   width: 34vw;
   height: 20vh;
 
@@ -42,7 +43,7 @@ export default {
   border-radius: 20px;
 }
 
-.nome-baralho {
+.deck-name {
   color: white;
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;

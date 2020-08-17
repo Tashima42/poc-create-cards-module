@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <CriarBaralho />
-    <BaralhoInicial corBg="#8130D1" />
+    <DefaultButton />
+    <InnerDeckDisplay corBg="#8130D1" />
   </div>
 </template>
 
 <script>
-import CriarBaralho from "./components/CriarBaralho";
-import BaralhoInicial from "./components/BaralhoInicial";
+import DefaultButton from "./components/DefaultButton";
+import InnerDeckDisplay from "./components/InnerDeckDisplay";
 export default {
   name: "App",
   components: {
-    CriarBaralho,
-    BaralhoInicial,
+    DefaultButton,
+    InnerDeckDisplay,
   },
 };
 </script>
