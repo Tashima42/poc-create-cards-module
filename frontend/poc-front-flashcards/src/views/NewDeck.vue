@@ -26,8 +26,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$padding-size: 180px;
-
 .create-deck {
   display: inline-flex;
   flex-direction: column;
@@ -37,14 +35,17 @@ $padding-size: 180px;
   align-self: center;
 }
 
+$padding-deck-horizontal: 180px;
+$padding-deck-vertical: 20px;
+
 .create-deck-inner {
   display: inline-flex;
   flex-direction: column;
 
   padding-left: $padding-size;
   padding-right: $padding-size;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: $padding-deck-vertical;
+  padding-bottom: $padding-deck-vertical;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),

@@ -23,15 +23,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.outer-deck-display {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 30px;
-  padding-right: 30px;
+$padding-outer-vertical: 5px;
+$padding-outer-horizontal: 30px;
 
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+$margin-outer-horizontal: 20px;
+$margin-outer-vertical: 10px;
+
+.outer-deck-display {
+  padding-top: $padding-outer-vertical;
+  padding-bottom: $padding-outer-vertical;
+  padding-left: $padding-outer-horizontal;
+  padding-right: $padding-outer-horizontal;
+
+  margin-right: $margin-outer-horizontal;
+  margin-bottom: $margin-outer-vertical;
+  margin-top: $margin-outer-vertical;
 
   display: inline-flex;
   flex-direction: row;
@@ -49,9 +55,11 @@ export default {
   justify-content: center;
 }
 
+$margin-edit-vertical: 15px;
+
 .edit-button {
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: $margin-edit-vertical;
+  margin-top: $margin-edit-vertical;
 
   border: none;
   background: none;
