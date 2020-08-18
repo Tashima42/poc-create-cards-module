@@ -42,8 +42,8 @@ $padding-deck-vertical: 20px;
   display: inline-flex;
   flex-direction: column;
 
-  padding-left: $padding-size;
-  padding-right: $padding-size;
+  padding-left: $padding-deck-horizontal;
+  padding-right: $padding-deck-horizontal;
   padding-top: $padding-deck-vertical;
   padding-bottom: $padding-deck-vertical;
 
