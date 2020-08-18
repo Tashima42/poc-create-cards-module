@@ -37,15 +37,20 @@ export default {
   justify-self: flex-end;
 
   width: 22vw;
-  min-width: 350px;
-  min-height: 37px;
+  height: 4vh;
+
+  padding: 0px 1px 0px 10px;
 
   margin-left: 15px;
+
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
 
   background: #d1d8ff;
   border: 1px solid #373737;
   box-sizing: border-box;
   border-radius: 20px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
+  outline: none;
 }
 </style>
