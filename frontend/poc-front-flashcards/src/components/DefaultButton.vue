@@ -22,9 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$button-padding-vertical: 10px;
-$button-padding-horizontal: 15px;
-
 .new-deck-btn {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -33,10 +30,7 @@ $button-padding-horizontal: 15px;
   text-align: center;
   text-transform: uppercase;
 
-  padding-left: $button-padding-horizontal;
-  padding-right: $button-padding-horizontal;
-  padding-top: $button-padding-vertical;
-  padding-bottom: $button-padding-vertical;
+  padding: 1.2vh 1.3vw 1.2vh 1.3vw;
 
   background: #384ed3;
   color: #e8e8e8;

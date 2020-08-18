@@ -50,9 +50,9 @@ export default {
 
 .deck-grid {
   display: inline-grid;
-  grid-template-columns: 470px 470px;
+  grid-template-columns: 30vw 30vw;
   grid-row: auto auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 5px;
+  grid-column-gap: 1vw;
+  grid-row-gap: 0vh;
 }
 </style>

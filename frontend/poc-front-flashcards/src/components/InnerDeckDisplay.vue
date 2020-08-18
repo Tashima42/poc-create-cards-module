@@ -23,16 +23,14 @@ export default {
 
 <style lang="scss" scoped>
 .inner-deck-display {
-  width: 19vw;
-  height: 10vh;
-  min-width: 280px;
-  min-height: 180px;
+  width: 17.5vw;
+  height: 16.5vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin: 30px;
+  margin: 3vh 2vw 3vh 2vw;
 
   background: #d13060;
 
@@ -46,7 +44,6 @@ export default {
   font-style: normal;
   font-weight: normal;
   font-size: 1.2em;
-  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
 

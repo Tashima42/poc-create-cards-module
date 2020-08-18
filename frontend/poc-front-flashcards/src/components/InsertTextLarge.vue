@@ -14,6 +14,9 @@ export default {
 .insert-text-field {
   display: inline-flex;
   flex-direction: column;
+  align-self: center;
+
+  width: 30vw;
 }
 
 .text-input-label {
@@ -35,13 +38,10 @@ export default {
 .text-input {
   align-self: center;
 
-  width: 28vw;
-  height: 8vh;
-  min-width: 280px;
-  min-height: 60px;
+  width: 30vw;
+  height: 14vh;
 
-  padding: 20px;
-  resize: none;
+  padding: 1vh 1vw 1vh 1vw;
 
   margin-bottom: 20px;
 

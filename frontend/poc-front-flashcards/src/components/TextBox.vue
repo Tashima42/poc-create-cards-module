@@ -4,7 +4,7 @@
     <div class="text-box">
       <p
         class="text-paragraph"
-      >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+      >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..</p>
     </div>
   </div>
 </template>
@@ -23,8 +23,7 @@ export default {
 .text-input-label {
   align-self: flex-start;
 
-  margin-left: 30px;
-  margin-bottom: 8px;
+  margin: 0px 0px 1vh 3vw;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -39,22 +38,18 @@ export default {
 .text-box {
   align-self: center;
 
-  width: 23vw;
-  height: 13vh;
-  min-width: 400px;
-  min-height: 94px;
+  width: 30vw;
+  height: 14vh;
+  /*  min-width: 400px;
+  min-height: 94px; */
 
   padding: 20px;
   resize: none;
 
-  margin-bottom: 20px;
+  display: flex;
+  flex: 1;
 
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1em;
-  text-align: start;
-  align-items: flex-start;
+  margin-bottom: 20px;
 
   background: #5030d1;
 
@@ -69,8 +64,10 @@ export default {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 1rem;
+  text-align: left;
+
+  align-self: center;
 
   word-wrap: break-word;
 
