@@ -4,8 +4,9 @@
     <InnerDeckDisplay deckName="test deck" />
     <OuterDeckDisplay />
     <InsertTextLarge />
-    <InsertTextSmall />-->
-    <NewDeck />
+    <InsertTextSmall />
+    <NewDeck />-->
+    <TextBox />
   </div>
 </template>
 
@@ -14,8 +15,9 @@
 import InnerDeckDisplay from "./components/InnerDeckDisplay";
 import OuterDeckDisplay from "./components/OuterDeckDisplay";
 import InsertTextLarge from "./components/InsertTextLarge"; 
-import InsertTextSmall from "./components/InsertTextSmall";*/
-import NewDeck from "./views/NewDeck";
+import InsertTextSmall from "./components/InsertTextSmall";
+import NewDeck from "./views/NewDeck";*/
+import TextBox from "./components/TextBox";
 
 export default {
   name: "App",
@@ -24,8 +26,9 @@ export default {
     InnerDeckDisplay,
     OuterDeckDisplay,
     InsertTextLarge, 
-    InsertTextSmall,*/
-    NewDeck,
+    InsertTextSmall,
+    NewDeck,*/
+    TextBox,
   },
 };
 </script>
