@@ -11,6 +11,7 @@ import DefaultButton from "./DefaultButton";
 import Initial from "../views/Initial";
 import NewDeck from "../views/NewDeck";
 import EditDeck from "../views/EditDeck"
+import StudyDeck from "../views/StudyDeck"
 
 Vue.use(Router)
 
@@ -42,6 +43,9 @@ export default new Router({
   }, {
     path: '/edit',
     component: EditDeck
+  }, {
+    path: "/study",
+    component: StudyDeck
   }
   ]
 })
