@@ -70,7 +70,7 @@ export default {
 }
 
 .card {
-  margin: 0px 2.5vw 0px 2.5vw;
+  margin: 0px 1.5vw 0px 1.5vw;
 
   display: flex;
   flex-direction: row;
@@ -78,7 +78,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  width: 40vw;
+  width: 35vw;
   height: 60vh;
   min-width: 400px;
   min-height: 437.6px;
@@ -97,7 +97,7 @@ export default {
   align-self: center;
   justify-self: flex-end;
 
-  margin: 0px 3vw 0px 0px;
+  margin: 0px 1.5vw 0px 0px;
 
   border: none;
   background: none;
@@ -116,10 +116,10 @@ export default {
 }
 
 .button-add {
-  margin: 3vh 3.5vw 0px 3.5vw;
+  margin: 3vh 2vw 0px 2vw;
 }
 
 .button-save {
-  margin: 3vh 3.5vw 0px 3.5vw;
+  margin: 3vh 2vw 0px 2vw;
 }
 </style>
