@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 $button-padding-vertical: 10px;
-$button-padding-horizontal: 1px;
+$button-padding-horizontal: 15px;
 
 .new-deck-btn {
   font-family: "Roboto Condensed", sans-serif;
