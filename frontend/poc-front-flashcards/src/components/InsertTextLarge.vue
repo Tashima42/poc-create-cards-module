@@ -38,10 +38,12 @@ export default {
 .text-input {
   align-self: center;
 
-  width: 30vw;
+  width: 28vw;
   height: 14vh;
 
   padding: 1vh 1vw 1vh 1vw;
+
+  resize: none;
 
   margin-bottom: 20px;
 
