@@ -6,10 +6,11 @@ import InnerDeckDisplay from "./InnerDeckDisplay";
 import InsertTextLarge from "./InsertTextLarge";
 import InsertTextSmall from "./InsertTextSmall";
 import TextBox from "./TextBox";
-import Initial from "../views/Initial";
-
-import NewDeck from "../views/NewDeck";
 import DefaultButton from "./DefaultButton";
+
+import Initial from "../views/Initial";
+import NewDeck from "../views/NewDeck";
+import EditDeck from "../views/EditDeck"
 
 Vue.use(Router)
 
@@ -38,6 +39,9 @@ export default new Router({
   }, {
     path: '/button',
     component: DefaultButton
+  }, {
+    path: '/edit',
+    component: EditDeck
   }
   ]
 })
