@@ -23,8 +23,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$padding-outer-vertical: 5px;
-$padding-outer-horizontal: 30px;
+$padding-outer-vertical: 0px;
+$padding-outer-horizontal: 5px;
 
 $margin-outer-horizontal: 20px;
 $margin-outer-vertical: 10px;

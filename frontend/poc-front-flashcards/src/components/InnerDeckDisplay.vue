@@ -23,9 +23,9 @@ export default {
 
 <style lang="scss" scoped>
 .inner-deck-display {
-  width: 20vw;
+  width: 19vw;
   height: 10vh;
-  min-width: 312px;
+  min-width: 280px;
   min-height: 180px;
 
   display: flex;
