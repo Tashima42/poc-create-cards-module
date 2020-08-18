@@ -23,12 +23,15 @@ export default {
 
 <style lang="scss" scoped>
 .inner-deck-display {
-  width: 17.5vw;
-  height: 16.5vh;
+  width: 30vw;
+  height: 25vh;
+  min-width: 135px;
+  min-height: 111px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
 
   margin: 3vh 2vw 3vh 2vw;
 
@@ -48,5 +51,25 @@ export default {
   text-transform: uppercase;
 
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .inner-deck-display {
+    margin: 3vh 2vw 1.4vh 3vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .inner-deck-display {
+    width: 60vw;
+    height: 20vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .inner-deck-display {
+    max-width: 418px;
+    max-height: 168px;
+  }
 }
 </style>

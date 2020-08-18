@@ -44,11 +44,8 @@ export default {
   justify-content: center;
 }
 
-$margin-edit-vertical: 2vh;
-
 .edit-button {
-  margin-bottom: $margin-edit-vertical;
-  margin-top: $margin-edit-vertical;
+  margin: 2vh 0px 2vh 0px;
 
   border: none;
   background: none;
@@ -57,5 +54,19 @@ $margin-edit-vertical: 2vh;
 
 .edit-button:active {
   transform: translateY(2px) translateX(-2px);
+}
+
+@media (max-width: 1000px) {
+  .outer-deck-display {
+    flex-direction: column;
+  }
+
+  .edit-sec {
+    flex-direction: row;
+  }
+
+  .edit-button {
+    margin: 1vh 3vw 1vh 3vw;
+  }
 }
 </style>
