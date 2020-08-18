@@ -3,7 +3,11 @@
     <p class="deck-name">Test deck</p>
     <div class="study-container">
       <TextBox class="question-box" />
-      <DefaultButton buttonText="Show answer" class="button-show" />
+      <TextBox class="answer-box" />
+      <div class="buttons">
+        <DefaultButton buttonText="C" class="button-correct" />
+        <DefaultButton buttonText="W" class="button-wrong" />
+      </div>
     </div>
   </div>
 </template>
@@ -13,7 +17,7 @@ import TextBox from "../components/TextBox";
 import DefaultButton from "../components/DefaultButton";
 
 export default {
-  name: "StudyDeck",
+  name: "StudyDeckAnswer",
   components: {
     TextBox,
     DefaultButton,
@@ -41,7 +45,7 @@ export default {
   flex-direction: column;
 
   width: 50vw;
-  height: 50vh;
+  height: 55vh;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -55,8 +59,25 @@ export default {
   align-self: center;
 }
 
-.button-show {
+.answer-box {
+  margin: 1vh 0px 0px 0px;
+
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
   margin: 1vh 0px 0px 0px;
   align-self: center;
+}
+
+.button-correct {
+  margin: 0px 2vw 0px 0px;
+}
+
+.button-wrong {
+  margin: 0px 0px 0px 2vw;
 }
 </style>
