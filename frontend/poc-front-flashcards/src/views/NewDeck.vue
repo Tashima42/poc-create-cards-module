@@ -33,6 +33,7 @@ export default {
 
 .insert-text-small {
   align-self: center;
+  margin-bottom: 1.8vh;
 }
 
 .create-deck-inner {
@@ -41,8 +42,8 @@ export default {
 
   justify-content: center;
 
-  width: 40vw;
-  height: 65vh;
+  width: 35vw;
+  height: 60vh;
 
   padding: 1vh 10vw 1vh 10vw;
 
