@@ -2,9 +2,16 @@
   <div class="insert-text-field">
     <p class="text-input-label">Text label</p>
     <div class="text-box">
-      <p
-        class="text-paragraph"
-      >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..</p>
+      <p class="text-paragraph">
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+      </p>
     </div>
   </div>
 </template>
@@ -38,10 +45,7 @@ export default {
 .text-box {
   align-self: center;
 
-  width: 30vw;
-  height: 14vh;
-  /*  min-width: 400px;
-  min-height: 94px; */
+  width: 45vw;
 
   padding: 20px;
   resize: none;
@@ -72,5 +76,17 @@ export default {
   word-wrap: break-word;
 
   color: #e8e8e8;
+}
+
+@media (max-width: 1024px) {
+  .text-box {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .text-box {
+    width: 70vw;
+  }
 }
 </style>

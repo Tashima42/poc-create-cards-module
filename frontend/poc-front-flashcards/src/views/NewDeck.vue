@@ -29,6 +29,7 @@ export default {
 .create-deck {
   display: inline-flex;
   flex-direction: column;
+  margin-top: 0px;
 }
 
 .insert-text-small {
@@ -43,9 +44,9 @@ export default {
   justify-content: center;
 
   width: 35vw;
-  height: 60vh;
+  height: 65vh;
 
-  padding: 1vh 10vw 1vh 10vw;
+  padding: 2vh 6vw 5vh 6vw;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -56,16 +57,20 @@ export default {
 .add-button {
   align-self: center;
 
-  width: 60px;
-
-  margin: 20px;
+  margin: 5vh 0vw 1vh 0vw;
 }
 
 .save-button {
   align-self: center;
 
-  margin: 40px;
+  margin: 3vh;
 
-  min-width: 200px;
+  min-width: 12vw;
+}
+
+@media (max-width: 768px) {
+  .create-deck-inner {
+    width: 80vw;
+  }
 }
 </style>

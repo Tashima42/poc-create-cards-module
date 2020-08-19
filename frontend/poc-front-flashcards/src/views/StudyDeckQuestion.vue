@@ -40,8 +40,9 @@ export default {
   display: inline-flex;
   flex-direction: column;
 
-  width: 50vw;
-  height: 55vh;
+  align-items: center;
+
+  width: 70vw;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -56,7 +57,19 @@ export default {
 }
 
 .button-show {
-  margin: 1vh 0px 0px 0px;
+  margin: 1vh 0px 4vh 0px;
   align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .study-container {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .study-container {
+    width: 90vw;
+  }
 }
 </style>

@@ -20,8 +20,6 @@ export default {
   align-self: center;
   justify-self: flex-start;
 
-  margin-right: 15px;
-
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -36,12 +34,12 @@ export default {
   align-self: center;
   justify-self: flex-end;
 
-  width: 22vw;
-  height: 4vh;
+  width: 25vw;
+  height: 5vh;
 
   padding: 0px 1px 0px 10px;
 
-  margin-left: 15px;
+  margin-left: 2vw;
 
   font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
@@ -52,5 +50,24 @@ export default {
   box-sizing: border-box;
   border-radius: 20px;
   outline: none;
+}
+
+@media (max-width: 1024px) {
+  .insert-text-field {
+    flex-direction: column;
+  }
+  .text-input-label {
+    margin-right: 0px;
+    align-self: center;
+  }
+  .text-input {
+    width: 33vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-input {
+    width: 80vw;
+  }
 }
 </style>

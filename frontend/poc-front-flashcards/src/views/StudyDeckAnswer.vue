@@ -34,6 +34,8 @@ export default {
   text-align: center;
   text-transform: uppercase;
 
+  margin-top: 0px;
+
   color: #5030d1;
 
   text-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -44,8 +46,7 @@ export default {
   display: inline-flex;
   flex-direction: column;
 
-  width: 50vw;
-  height: 55vh;
+  width: 70vw;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -54,7 +55,7 @@ export default {
 }
 
 .question-box {
-  margin: 5vh 0px 0px 0px;
+  margin: 4vh 0px 0px 0px;
 
   align-self: center;
 }
@@ -69,7 +70,7 @@ export default {
   display: flex;
   justify-content: center;
 
-  margin: 1vh 0px 0px 0px;
+  margin: 1vh 0px 4vh 0px;
   align-self: center;
 }
 
@@ -79,5 +80,17 @@ export default {
 
 .button-wrong {
   margin: 0px 0px 0px 2vw;
+}
+
+@media (max-width: 768px) {
+  .study-container {
+    width: 85vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .study-container {
+    width: 90vw;
+  }
 }
 </style>
