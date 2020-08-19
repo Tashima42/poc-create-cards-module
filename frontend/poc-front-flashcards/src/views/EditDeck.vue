@@ -122,7 +122,6 @@ export default {
 .button-save {
   margin: 3vh 2vw 0px 2vw;
 }
-
 @media (max-width: 768px) {
   .card-edit {
     flex-direction: column;

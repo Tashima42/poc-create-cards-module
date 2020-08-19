@@ -52,6 +52,7 @@ export default {
   outline: none;
 }
 
+
 @media (max-width: 1024px) {
   .insert-text-field {
     flex-direction: column;

@@ -44,6 +44,8 @@ export default {
   justify-content: center;
 }
 
+$margin-edit-vertical: 2vh;
+
 .edit-button {
   margin: 2vh 0px 2vh 0px;
 
