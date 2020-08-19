@@ -11,6 +11,8 @@ import DefaultButton from "./DefaultButton";
 import Initial from "../views/Initial";
 import NewDeck from "../views/NewDeck";
 import EditDeck from "../views/EditDeck"
+import StudyDeckQuestion from "../views/StudyDeckQuestion"
+import StudyDeckAnswer from "../views/StudyDeckAnswer"
 
 Vue.use(Router)
 
@@ -42,6 +44,12 @@ export default new Router({
   }, {
     path: '/edit',
     component: EditDeck
+  }, {
+    path: "/study-question",
+    component: StudyDeckQuestion
+  }, {
+    path: "/study-answer",
+    component: StudyDeckAnswer
   }
   ]
 })

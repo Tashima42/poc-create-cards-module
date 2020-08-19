@@ -4,8 +4,8 @@
     <div class="card-edit">
       <div class="card">
         <div class="text-input">
-          <InsertTextLarge />
-          <InsertTextLarge />
+          <InsertTextLarge class="insert-text" />
+          <InsertTextLarge class="insert-text" />
         </div>
         <button class="delete-button">
           <img src="../assets/icons/edit-trash.svg" />
@@ -13,8 +13,8 @@
       </div>
       <div class="card">
         <div class="text-input">
-          <InsertTextLarge />
-          <InsertTextLarge />
+          <InsertTextLarge class="insert-text" />
+          <InsertTextLarge class="insert-text" />
         </div>
         <button class="delete-button">
           <img src="../assets/icons/edit-trash.svg" />
@@ -78,7 +78,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  width: 35vw;
+  width: 41vw;
   height: 60vh;
   min-width: 400px;
   min-height: 437.6px;
@@ -121,5 +121,32 @@ export default {
 
 .button-save {
   margin: 3vh 2vw 0px 2vw;
+}
+@media (max-width: 768px) {
+  .card-edit {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-direction: column;
+
+    margin: 3vh 0vw 3vh 0vw;
+
+    width: 80vw;
+    height: 60vh;
+  }
+  .text-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .delete-button {
+    margin: 3vh 0vw 0px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    height: 80vh;
+  }
 }
 </style>

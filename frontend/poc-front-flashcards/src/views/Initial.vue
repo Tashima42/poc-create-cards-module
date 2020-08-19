@@ -1,7 +1,7 @@
 <template>
   <div class="initial">
     <DefaultButton buttonText="New deck" />
-    <p class="user-name">Paulo's Decks</p>
+    <p class="decks-title">Your Decks</p>
     <div class="deck-grid">
       <OuterDeckDisplay class="deck" />
       <OuterDeckDisplay class="deck" />
@@ -30,15 +30,15 @@ export default {
   flex-direction: column;
 }
 
-.user-name {
+.decks-title {
   align-self: flex-start;
 
-  margin-bottom: 0px;
+  margin: 3vh 0px 1vh 1vw;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
 
@@ -50,9 +50,29 @@ export default {
 
 .deck-grid {
   display: inline-grid;
-  grid-template-columns: 30vw 30vw;
+  grid-template-columns: 40vw 40vw;
   grid-row: auto auto;
   grid-column-gap: 1vw;
   grid-row-gap: 0vh;
+}
+
+@media (max-width: 425px) {
+  .deck-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .decks-title {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .deck-grid {
+    display: inline-grid;
+    grid-template-columns: 25vw 25vw;
+    grid-row: auto auto;
+    grid-column-gap: 1vw;
+    grid-row-gap: 0vh;
+  }
 }
 </style>

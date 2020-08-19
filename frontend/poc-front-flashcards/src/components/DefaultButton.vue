@@ -45,4 +45,15 @@ export default {
 .new-deck-btn:active {
   transform: translateY(2px) translateX(-2px);
 }
+
+@media (max-width: 1024px) {
+  .new-deck-btn {
+    padding: 1.2vh 1.8vw 1.2vh 1.8vw;
+  }
+}
+@media (max-width: 425px) {
+  .new-deck-btn {
+    padding: 1.2vh 6vw 1.2vh 6vw;
+  }
+}
 </style>

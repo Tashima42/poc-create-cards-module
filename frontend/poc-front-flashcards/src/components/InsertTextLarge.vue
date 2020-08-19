@@ -21,9 +21,7 @@ export default {
 
 .text-input-label {
   align-self: flex-start;
-
-  margin-left: 30px;
-  margin-bottom: 8px;
+  margin: 4vh 0px 1.5vh 0px;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -37,9 +35,9 @@ export default {
 
 .text-input {
   align-self: center;
-
-  width: 25vw;
-  height: 14vh;
+  
+  width: 32vw;
+  height: 18vh;
 
   padding: 1vh 1vw 1vh 1vw;
 
@@ -62,5 +60,14 @@ export default {
   border-radius: 20px;
   border: none;
   outline: none;
+}
+
+@media (max-width: 768px) {
+  .text-input-label {
+    align-self: center;
+  }
+  .insert-text-field .text-input {
+    width: 70vw;
+  }
 }
 </style>
