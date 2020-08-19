@@ -89,4 +89,5 @@ export default {
     width: 70vw;
   }
 }
+
 </style>
