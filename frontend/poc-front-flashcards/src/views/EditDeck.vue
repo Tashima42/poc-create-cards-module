@@ -22,8 +22,12 @@
       </div>
     </div>
     <div class="buttons">
-      <DefaultButton buttonText="+" class="button-add" />
-      <DefaultButton buttonText="S" class="button-save" />
+      <DefaultButton class="button-add" blue>
+        <img src="../assets/icons/new.svg" alt="ADD" />
+      </DefaultButton>
+      <DefaultButton class="button-save" green>
+        <img src="../assets/icons/save.svg" alt="SAVE" />
+      </DefaultButton>
     </div>
   </div>
 </template>
@@ -121,6 +125,16 @@ export default {
 
 .button-save {
   margin: 3vh 2vw 0px 2vw;
+}
+
+.button-add img {
+  width: 30px;
+  margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+}
+
+.button-save img {
+  width: 30px;
+  margin: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
 
 @media (max-width: 768px) {

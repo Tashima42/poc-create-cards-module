@@ -1,6 +1,8 @@
 <template>
-  <div class="create-deck">
-    <button class="new-deck-btn">{{ text }}</button>
+  <div class="default-button">
+    <button class="new-btn">
+      <slot></slot>
+    </button>
   </div>
 </template>
 
@@ -22,17 +24,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.new-deck-btn {
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.7em;
-  text-align: center;
-  text-transform: uppercase;
-
+.new-btn {
   padding: 1.2vh 1.3vw 1.2vh 1.3vw;
 
-  background: #384ed3;
   color: #e8e8e8;
 
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -42,17 +36,27 @@ export default {
   outline: none;
 }
 
-.new-deck-btn:active {
+.new-btn:active {
   transform: translateY(2px) translateX(-2px);
 }
 
+.default-button[green] .new-btn {
+  background: #5cb85c;
+}
+.default-button[blue] .new-btn {
+  background: #384ed3;
+}
+.default-button[red] .new-btn {
+  background: #da2239;
+}
+
 @media (max-width: 1024px) {
-  .new-deck-btn {
+  .new-btn {
     padding: 1.2vh 1.8vw 1.2vh 1.8vw;
   }
 }
 @media (max-width: 425px) {
-  .new-deck-btn {
+  .new-btn {
     padding: 1.2vh 6vw 1.2vh 6vw;
   }
 }
