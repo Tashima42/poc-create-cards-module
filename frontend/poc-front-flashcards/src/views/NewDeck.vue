@@ -4,9 +4,13 @@
     <div class="create-deck-inner">
       <InsertTextLarge class="insert-text-large" />
       <InsertTextLarge class="insert-text-large" />
-      <DefaultButton class="add-button" buttonText="+" />
+      <DefaultButton class="add-button" blue>
+        <img src="../assets/icons/new.svg" />
+      </DefaultButton>
     </div>
-    <DefaultButton class="save-button" buttonText="save" />
+    <DefaultButton class="save-button" green>
+      <p>save</p>
+    </DefaultButton>
   </div>
 </template>
 
@@ -66,6 +70,22 @@ export default {
   margin: 3vh;
 
   min-width: 12vw;
+}
+
+.add-button img {
+  width: 30px;
+  margin: 0.6vh 0.2vw 0.6vh 0.2vw;
+}
+
+.save-button p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0.5vh 2.5vw 0.5vh 2.5vw;
 }
 
 @media (max-width: 768px) {

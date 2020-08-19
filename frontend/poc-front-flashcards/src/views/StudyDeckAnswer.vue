@@ -5,8 +5,12 @@
       <TextBox class="question-box" />
       <TextBox class="answer-box" />
       <div class="buttons">
-        <DefaultButton buttonText="C" class="button-correct" />
-        <DefaultButton buttonText="W" class="button-wrong" />
+        <DefaultButton class="button-wrong" red>
+          <img src="../assets/icons/wrong.svg" />
+        </DefaultButton>
+        <DefaultButton class="button-correct" green>
+          <img src="../assets/icons/correct.svg" alt="CORRECT" />
+        </DefaultButton>
       </div>
     </div>
   </div>
@@ -75,11 +79,19 @@ export default {
 }
 
 .button-correct {
-  margin: 0px 2vw 0px 0px;
+  margin: 0px 0px 0px 2vw;
 }
 
 .button-wrong {
-  margin: 0px 0px 0px 2vw;
+  margin: 0px 2vw 0px 0px;
+}
+
+.button-correct img {
+  margin: 0.7vh 0.1vw 0.3vh 0vw;
+}
+
+.button-wrong img {
+  margin: 0.8vh 0.2vw 0.3vh 0.4vw;
 }
 
 @media (max-width: 768px) {

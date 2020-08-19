@@ -1,6 +1,8 @@
 <template>
   <div class="initial">
-    <DefaultButton buttonText="New deck" />
+    <DefaultButton blue class="new-deck-btn">
+      <p>New deck</p>
+    </DefaultButton>
     <p class="decks-title">Your Decks</p>
     <div class="deck-grid">
       <OuterDeckDisplay class="deck" />
@@ -54,6 +56,17 @@ export default {
   grid-row: auto auto;
   grid-column-gap: 1vw;
   grid-row-gap: 0vh;
+}
+
+.new-deck-btn p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7em;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 1vh 0.5vw 1vh 0.5vw;
 }
 
 @media (max-width: 425px) {

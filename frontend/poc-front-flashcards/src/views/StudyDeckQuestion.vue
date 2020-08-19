@@ -3,7 +3,9 @@
     <p class="deck-name">Test deck</p>
     <div class="study-container">
       <TextBox class="question-box" />
-      <DefaultButton buttonText="Show answer" class="button-show" />
+      <DefaultButton class="button-show" blue>
+        <p>show answer</p>
+      </DefaultButton>
     </div>
   </div>
 </template>
@@ -59,6 +61,17 @@ export default {
 .button-show {
   margin: 1vh 0px 4vh 0px;
   align-self: center;
+}
+
+.button-show p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7em;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 1vh 0.5vw 1vh 0.5vw;
 }
 
 @media (max-width: 1024px) {
