@@ -3,12 +3,7 @@ const app = new Koa()
 const cors = require('@koa/cors')
 const db = require('./db')
 
-app.use((ctx, next) => {
-  ctx.header("Access-Control-Allow-Origin", "*");
-  ctx.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-  app.use(cors());
-  next();
-});
+app.use(cors());
 
 const router = require('./routes')
 app.use(router.routes())

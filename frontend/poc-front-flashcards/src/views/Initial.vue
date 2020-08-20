@@ -27,9 +27,8 @@ export default {
   methods: {
     getData() {
       this.$http
-        .get("card/one?id=5f32af9503e55b591ec0404f")
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+        .get("card?limit=3&initialdate=2020-08-14&enddate=2020-08-18")
+        .then((res) => console.log(res));
     },
   },
 };

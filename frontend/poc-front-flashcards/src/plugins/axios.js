@@ -6,7 +6,7 @@ Vue.use({
   install(Vue) {
     Vue.prototype.$http =
       axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: 'http://192.168.15.13:3000',
       })
   }
 })
