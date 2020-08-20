@@ -1,8 +1,10 @@
 <template>
   <div class="initial">
-    <DefaultButton blue class="new-deck-btn">
-      <p>New deck</p>
-    </DefaultButton>
+    <div class="new-deck" @click="newDeck">
+      <DefaultButton blue class="new-deck-btn">
+        <p>New deck</p>
+      </DefaultButton>
+    </div>
     <p class="decks-title">Your Decks</p>
     <div class="deck-grid">
       <OuterDeckDisplay class="deck" />
@@ -22,6 +24,11 @@ export default {
   components: {
     DefaultButton,
     OuterDeckDisplay,
+  },
+  methods: {
+    newDeck() {
+      this.$router.push({ name: "NewDeck" });
+    },
   },
 };
 </script>
