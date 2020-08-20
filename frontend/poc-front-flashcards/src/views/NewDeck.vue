@@ -48,7 +48,7 @@ export default {
   justify-content: center;
 
   width: 35vw;
-  height: 65vh;
+  height: 75vh;
 
   padding: 2vh 6vw 5vh 6vw;
 
