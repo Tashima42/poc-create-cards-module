@@ -1,16 +1,20 @@
 <template>
   <div class="study">
-    <p class="deck-name">Test deck</p>
+    <router-link :to="{ name: 'initial' }" tag="p" class="deck-name">Test deck</router-link>
     <div class="study-container">
       <TextBox class="question-box" />
       <TextBox class="answer-box" />
       <div class="buttons">
-        <DefaultButton class="button-wrong" red>
-          <img src="../assets/icons/wrong.svg" />
-        </DefaultButton>
-        <DefaultButton class="button-correct" green>
-          <img src="../assets/icons/correct.svg" alt="CORRECT" />
-        </DefaultButton>
+        <div class="study-wrong" @click="studyQuestion">
+          <DefaultButton class="button-wrong" red>
+            <img src="../assets/icons/wrong.svg" />
+          </DefaultButton>
+        </div>
+        <div class="study-correct" @click="studyQuestion">
+          <DefaultButton class="button-correct" green @click="studyQuestion">
+            <img src="../assets/icons/correct.svg" alt="CORRECT" />
+          </DefaultButton>
+        </div>
       </div>
     </div>
   </div>
@@ -26,6 +30,11 @@ export default {
     TextBox,
     DefaultButton,
   },
+  methods: {
+    studyQuestion() {
+      this.$router.push({ name: "StudyQuestion" });
+    },
+  },
 };
 </script>
 
@@ -37,6 +46,7 @@ export default {
   font-size: 2.3rem;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
 
   margin-top: 0px;
 

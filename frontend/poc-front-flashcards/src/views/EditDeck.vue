@@ -1,6 +1,6 @@
 <template>
   <div class="edit-deck">
-    <p class="deck-name">Programming deck</p>
+    <router-link :to="{ name: 'initial' }" tag="p" class="deck-name">Test deck</router-link>
     <div class="card-edit">
       <div class="card">
         <div class="text-input">
@@ -25,9 +25,11 @@
       <DefaultButton class="button-add" blue>
         <img src="../assets/icons/new.svg" alt="ADD" />
       </DefaultButton>
-      <DefaultButton class="button-save" green>
-        <img src="../assets/icons/save.svg" alt="SAVE" />
-      </DefaultButton>
+      <div class="save-btn" @click="saveBtn">
+        <DefaultButton class="button-save" green>
+          <img src="../assets/icons/save.svg" alt="SAVE" />
+        </DefaultButton>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +43,11 @@ export default {
   components: {
     DefaultButton,
     InsertTextLarge,
+  },
+  methods: {
+    saveBtn() {
+      this.$router.push({ name: "initial" });
+    },
   },
 };
 </script>

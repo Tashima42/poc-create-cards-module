@@ -1,5 +1,5 @@
 <template>
-  <div class="inner-deck-display">
+  <div class="inner-deck-display" @click="studyQuestion">
     <p class="deck-name">{{ name }}</p>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
     deckName: {
       type: String,
       default: "Deck name",
+    },
+  },
+  methods: {
+    studyQuestion() {
+      this.$router.push({ name: "StudyQuestion" });
     },
   },
 };
