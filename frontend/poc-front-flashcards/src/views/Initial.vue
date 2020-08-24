@@ -84,7 +84,7 @@ export default {
   margin: 1vh 0.5vw 1vh 0.5vw;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .deck-grid {
     display: flex;
     flex-direction: column;

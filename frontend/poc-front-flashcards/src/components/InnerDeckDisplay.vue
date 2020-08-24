@@ -64,6 +64,13 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .inner-deck-display {
+    width: 45vw;
+    height: 20vh;
+  }
+}
+
 @media (max-width: 425px) {
   .inner-deck-display {
     width: 60vw;
