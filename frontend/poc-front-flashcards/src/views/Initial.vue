@@ -10,6 +10,7 @@
       <OuterDeckDisplay class="deck" />
       <OuterDeckDisplay class="deck" />
     </div>
+    <button @click="getData">a</button>
   </div>
 </template>
 
@@ -22,6 +23,13 @@ export default {
   components: {
     DefaultButton,
     OuterDeckDisplay,
+  },
+  methods: {
+    getData() {
+      this.$http
+        .get("card?limit=3&initialdate=2020-08-13&enddate=2020-08-20")
+        .then((res) => console.log(res));
+    },
   },
 };
 </script>

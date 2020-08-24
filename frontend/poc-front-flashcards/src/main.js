@@ -4,6 +4,8 @@ import router from './components/router'
 
 Vue.config.productionTip = false
 
+//Dotenv
+require('dotenv').config()
 //Global CSS file
 import '@/assets/css/main.css'
 // Axios
