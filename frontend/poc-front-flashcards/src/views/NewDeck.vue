@@ -56,7 +56,7 @@ export default {
 
   justify-content: center;
 
-  width: 35vw;
+  width: 45vw;
   height: 65vh;
   min-width: 520px;
   min-height: 420px;
