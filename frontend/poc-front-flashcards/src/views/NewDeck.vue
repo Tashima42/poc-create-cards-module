@@ -4,13 +4,16 @@
     <div class="create-deck-inner">
       <InsertTextLarge class="insert-text-large" />
       <InsertTextLarge class="insert-text-large" />
+
       <DefaultButton class="add-button" blue>
         <img src="../assets/icons/new.svg" />
       </DefaultButton>
     </div>
-    <DefaultButton class="save-button" green>
-      <p>save</p>
-    </DefaultButton>
+    <div class="save-btn" @click="saveBtn">
+      <DefaultButton class="save-button" green>
+        <p>save</p>
+      </DefaultButton>
+    </div>
   </div>
 </template>
 
@@ -25,6 +28,11 @@ export default {
     InsertTextSmall,
     InsertTextLarge,
     DefaultButton,
+  },
+  methods: {
+    saveBtn() {
+      this.$router.push({ name: "initial" });
+    },
   },
 };
 </script>

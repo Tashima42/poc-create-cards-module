@@ -1,11 +1,13 @@
 <template>
   <div class="study">
-    <p class="deck-name">Test deck</p>
+    <router-link :to="{ name: 'initial' }" tag="p" class="deck-name">Test deck</router-link>
     <div class="study-container">
       <TextBox class="question-box" />
-      <DefaultButton class="button-show" blue>
-        <p>show answer</p>
-      </DefaultButton>
+      <div class="study-answer" @click="studyAnswer">
+        <DefaultButton class="button-show" blue>
+          <p>show answer</p>
+        </DefaultButton>
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +22,11 @@ export default {
     TextBox,
     DefaultButton,
   },
+  methods: {
+    studyAnswer() {
+      this.$router.push({ name: "StudyAnswer" });
+    },
+  },
 };
 </script>
 
@@ -31,6 +38,7 @@ export default {
   font-size: 2.3rem;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
 
   color: #5030d1;
 

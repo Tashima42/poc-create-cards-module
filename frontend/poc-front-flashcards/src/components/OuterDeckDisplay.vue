@@ -2,7 +2,7 @@
   <div class="outer-deck-display">
     <InnerDeckDisplay backgroundColor="#8130D1" deckName="test deck" />
     <div class="edit-sec">
-      <button class="edit-button">
+      <button class="edit-button" @click="editDeck">
         <img src="../assets/icons/edit-pencil.svg" />
       </button>
       <button class="edit-button">
@@ -18,6 +18,11 @@ export default {
   name: "OuterDeckDisplay",
   components: {
     InnerDeckDisplay,
+  },
+  methods: {
+    editDeck() {
+      this.$router.push({ name: "EditDeck" });
+    },
   },
 };
 </script>
@@ -43,8 +48,6 @@ export default {
 
   justify-content: center;
 }
-
-$margin-edit-vertical: 2vh;
 
 .edit-button {
   margin: 2vh 0px 2vh 0px;
