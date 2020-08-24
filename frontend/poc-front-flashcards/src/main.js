@@ -6,6 +6,9 @@ Vue.config.productionTip = false
 
 //Global CSS file
 import '@/assets/css/main.css'
+// Axios
+import './plugins/axios'
+
 
 new Vue({
   router,
