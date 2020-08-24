@@ -54,9 +54,10 @@ export default {
 
 <style lang="scss" scoped>
 .edit-deck {
-  display: inline-flex;
-
+  display: flex;
+  margin-top: 2vh;
   flex-direction: column;
+  align-items: center;
 }
 
 .deck-name {
@@ -120,7 +121,7 @@ export default {
 }
 
 .buttons {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
 
   align-self: center;

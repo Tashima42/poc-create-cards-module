@@ -5,12 +5,14 @@
         <p>New deck</p>
       </DefaultButton>
     </div>
-    <p class="decks-title">Your Decks</p>
-    <div class="deck-grid">
-      <OuterDeckDisplay class="deck" />
-      <OuterDeckDisplay class="deck" />
-      <OuterDeckDisplay class="deck" />
-      <OuterDeckDisplay class="deck" />
+    <div class="bottom-decks">
+      <p class="decks-title">Your Decks</p>
+      <div class="deck-grid">
+        <OuterDeckDisplay class="deck" />
+        <OuterDeckDisplay class="deck" />
+        <OuterDeckDisplay class="deck" />
+        <OuterDeckDisplay class="deck" />
+      </div>
     </div>
   </div>
 </template>
@@ -35,13 +37,19 @@ export default {
 
 <style lang="scss" scoped>
 .initial {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  align-items: center;
+}
+
+.bottom-decks {
+  display: flex;
   flex-direction: column;
 }
 
 .decks-title {
   align-self: flex-start;
-
   margin: 3vh 0px 1vh 1vw;
 
   font-family: "Roboto Condensed", sans-serif;

@@ -7,10 +7,6 @@
         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..eque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
       </p>
     </div>
   </div>
@@ -23,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .insert-text-field {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -89,5 +85,4 @@ export default {
     width: 70vw;
   }
 }
-
 </style>
