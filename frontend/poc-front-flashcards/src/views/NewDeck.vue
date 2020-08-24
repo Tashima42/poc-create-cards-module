@@ -56,12 +56,10 @@ export default {
 
   justify-content: center;
 
-  width: 45vw;
-  height: 65vh;
-  min-width: 520px;
-  min-height: 420px;
-
-  padding: 2vh 6vw 5vh 6vw;
+  width: 55vw;
+  height: 70vh;
+  min-width: 600px;
+  min-height: 500px;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -72,7 +70,7 @@ export default {
 .add-button {
   align-self: center;
 
-  margin: 2vh 0vw 1vh 0vw;
+  margin: 2vh 0vw 3vh 0vw;
 }
 
 .save-button {
@@ -97,12 +95,6 @@ export default {
   text-transform: uppercase;
 
   margin: 0.5vh 2.5vw 0.5vh 2.5vw;
-}
-
-@media (max-width: 768px) {
-  .create-deck-inner {
-    width: 80vw;
-  }
 }
 
 @media (max-width: 768px) {

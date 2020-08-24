@@ -35,11 +35,13 @@ export default {
 }
 
 .text-input {
-  align-self: center;
+  position: relative;
 
-  width: 50vw;
+  width: 90%;
   height: 18vh;
   min-height: 115px;
+
+  align-self: center;
 
   padding: 1vh 1vw 1vh 1vw;
 
@@ -52,7 +54,6 @@ export default {
   font-weight: normal;
   font-size: 1em;
   text-align: start;
-  align-items: flex-start;
 
   background: #e8e8e8;
   color: #585858;
@@ -64,13 +65,23 @@ export default {
   outline: none;
 }
 
+@media (max-width: 1024px) {
+  .insert-text-field {
+    .text-input {
+      width: 170%;
+      min-width: 250px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .text-input-label {
     align-self: center;
   }
-  .insert-text-field .text-input {
-    width: 82vw;
-    min-width: 250px;
+  .insert-text-field {
+    .text-input {
+      width: 200%;
+      min-width: 250px;
+    }
   }
 }
 </style>
