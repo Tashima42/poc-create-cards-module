@@ -29,15 +29,18 @@ export default {
   font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
 
   color: #373737;
 }
 
 .text-input {
   align-self: center;
-  
+
   width: 32vw;
   height: 18vh;
+  min-width: 450px;
+  min-height: 115px;
 
   padding: 1vh 1vw 1vh 1vw;
 
@@ -67,7 +70,8 @@ export default {
     align-self: center;
   }
   .insert-text-field .text-input {
-    width: 70vw;
+    width: 82vw;
+    min-width: 250px;
   }
 }
 </style>

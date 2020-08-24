@@ -58,6 +58,8 @@ export default {
 
   width: 35vw;
   height: 65vh;
+  min-width: 520px;
+  min-height: 420px;
 
   padding: 2vh 6vw 5vh 6vw;
 
@@ -100,6 +102,13 @@ export default {
 @media (max-width: 768px) {
   .create-deck-inner {
     width: 80vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .create-deck-inner {
+    width: 80vw;
+    min-width: 80px;
   }
 }
 </style>

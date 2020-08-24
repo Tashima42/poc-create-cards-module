@@ -36,7 +36,7 @@ export default {
 
   width: 25vw;
   height: 5vh;
-
+  min-height: 37px;
   padding: 0px 1px 0px 10px;
 
   margin-left: 2vw;
@@ -51,7 +51,6 @@ export default {
   border-radius: 20px;
   outline: none;
 }
-
 
 @media (max-width: 1024px) {
   .insert-text-field {
