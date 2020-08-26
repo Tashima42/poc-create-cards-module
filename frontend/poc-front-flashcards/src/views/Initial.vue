@@ -6,7 +6,7 @@
       </DefaultButton>
     </div>
     <div class="bottom-decks">
-      <p class="decks-title">Your Decks</p>
+      <p>Your Decks</p>
       <div class="deck-grid">
         <OuterDeckDisplay class="deck" />
         <OuterDeckDisplay class="deck" />
@@ -37,6 +37,8 @@ export default {
 
 <style lang="scss" scoped>
 .initial {
+  margin-top: 2vh;
+
   display: flex;
   flex-direction: column;
   margin-top: 3vh;
@@ -46,23 +48,23 @@ export default {
 .bottom-decks {
   display: flex;
   flex-direction: column;
-}
 
-.decks-title {
-  align-self: flex-start;
-  margin: 3vh 0px 1vh 1vw;
+  p {
+    align-self: flex-start;
+    margin: 3vh 0px 1vh 1vw;
 
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
 
-  color: #1f38d1;
+    color: #1f38d1;
 
-  text-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
-    0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
+      0px 5px 22px rgba(0, 0, 0, 0.12), 0px 7px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .deck-grid {
@@ -73,18 +75,20 @@ export default {
   grid-row-gap: 0vh;
 }
 
-.new-deck-btn p {
-  font-family: "Roboto Condensed", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.7em;
-  text-align: center;
-  text-transform: uppercase;
+.new-deck-btn {
+  p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
 
-  margin: 1vh 0.5vw 1vh 0.5vw;
+    margin: 1vh 0.5vw 1vh 0.5vw;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .deck-grid {
     display: flex;
     flex-direction: column;
