@@ -4,7 +4,7 @@
     <div class="card-edit">
       <div class="card">
         <div class="text-input">
-          <InsertTextLarge class="insert-text" />
+          <InsertTextLarge style="{ width: 100vw; }" />
           <InsertTextLarge class="insert-text" />
         </div>
         <button class="delete-button">
@@ -55,7 +55,9 @@ export default {
 <style lang="scss" scoped>
 .edit-deck {
   display: inline-flex;
+  margin-top: 2vh;
 
+  display: flex;
   flex-direction: column;
 }
 
@@ -77,6 +79,7 @@ export default {
   display: flex;
   flex-direction: row;
 
+  justify-content: center;
   align-content: center;
 }
 
@@ -91,8 +94,8 @@ export default {
 
   width: 41vw;
   height: 60vh;
-  min-width: 400px;
-  min-height: 437.6px;
+  min-width: 300px;
+  min-height: 500px;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -134,17 +137,21 @@ export default {
   margin: 3vh 2vw 0px 2vw;
 }
 
-.button-add img {
-  width: 30px;
-  margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+.button-add {
+  img {
+    width: 30px;
+    margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+  }
 }
 
-.button-save img {
-  width: 30px;
-  margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+.button-save {
+  img {
+    width: 30px;
+    margin: 0.5vh 0.5vw 0.5vh 0.5vw;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-edit {
     flex-direction: column;
   }

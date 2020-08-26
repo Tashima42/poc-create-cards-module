@@ -29,28 +29,29 @@ export default {
   font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
 
   color: #373737;
 }
 
 .text-input {
-  align-self: center;
-  
-  width: 32vw;
+  position: relative;
+
+  width: 30vw;
   height: 18vh;
+  min-height: 115px;
+
+  align-self: center;
 
   padding: 1vh 1vw 1vh 1vw;
 
   resize: none;
-
-  margin-bottom: 20px;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1em;
   text-align: start;
-  align-items: flex-start;
 
   background: #e8e8e8;
   color: #585858;
@@ -62,12 +63,23 @@ export default {
   outline: none;
 }
 
+@media (max-width: 1024px) {
+  .insert-text-field {
+    .text-input {
+      width: 170%;
+      min-width: 250px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .text-input-label {
     align-self: center;
   }
-  .insert-text-field .text-input {
-    width: 70vw;
+  .insert-text-field {
+    .text-input {
+      width: 200%;
+      min-width: 250px;
+    }
   }
 }
 </style>

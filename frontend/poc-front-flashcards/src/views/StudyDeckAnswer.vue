@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.study {
+  margin-top: 2vh;
+}
+
 .deck-name {
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
@@ -47,8 +51,6 @@ export default {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
-  margin-top: 0px;
 
   color: #5030d1;
 

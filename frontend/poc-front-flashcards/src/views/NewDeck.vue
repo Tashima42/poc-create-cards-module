@@ -39,9 +39,10 @@ export default {
 
 <style lang="scss" scoped>
 .create-deck {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  margin-top: 0px;
+  margin-top: 2vh;
+  align-items: center;
 }
 
 .insert-text-small {
@@ -50,15 +51,15 @@ export default {
 }
 
 .create-deck-inner {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 
   justify-content: center;
 
-  width: 35vw;
-  height: 75vh;
-
-  padding: 2vh 6vw 5vh 6vw;
+  width: 55vw;
+  height: 70vh;
+  min-width: 600px;
+  min-height: 500px;
 
   background: #d1d8ff;
   box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.14),
@@ -69,7 +70,7 @@ export default {
 .add-button {
   align-self: center;
 
-  margin: 5vh 0vw 1vh 0vw;
+  margin: 2vh 0vw 3vh 0vw;
 }
 
 .save-button {
@@ -99,6 +100,7 @@ export default {
 @media (max-width: 768px) {
   .create-deck-inner {
     width: 80vw;
+    min-width: 80px;
   }
 }
 </style>
