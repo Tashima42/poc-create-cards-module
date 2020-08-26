@@ -39,7 +39,7 @@ export default {
 .initial {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
+  margin-top: 3vh;
   align-items: center;
 }
 

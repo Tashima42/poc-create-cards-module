@@ -4,7 +4,7 @@
     <div class="card-edit">
       <div class="card">
         <div class="text-input">
-          <InsertTextLarge class="insert-text" />
+          <InsertTextLarge style="{ width: 100vw; }" />
           <InsertTextLarge class="insert-text" />
         </div>
         <button class="delete-button">
@@ -54,10 +54,9 @@ export default {
 
 <style lang="scss" scoped>
 .edit-deck {
-  display: flex;
+  display: inline-flex;
   margin-top: 2vh;
   flex-direction: column;
-  align-items: center;
 }
 
 .deck-name {
@@ -121,7 +120,7 @@ export default {
 }
 
 .buttons {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 
   align-self: center;

@@ -12,7 +12,7 @@ export default {
 
 <style lang="scss" scoped>
 .insert-text-field {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-self: center;
 
@@ -37,15 +37,13 @@ export default {
 .text-input {
   align-self: center;
 
-  width: 50vw;
+  width: 30vw;
   height: 18vh;
   min-height: 115px;
 
   padding: 1vh 1vw 1vh 1vw;
 
   resize: none;
-
-  margin-bottom: 20px;
 
   font-family: "Roboto Condensed", sans-serif;
   font-style: normal;
